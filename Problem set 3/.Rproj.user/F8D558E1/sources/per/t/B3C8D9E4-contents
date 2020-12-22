@@ -1,0 +1,91 @@
+#clear the environment
+rm(list=ls())
+library(tidyverse)
+getmode <- function(v) {
+  uniqv <- unique(v)
+  uniqv[which.max(tabulate(match(v, uniqv)))]
+}
+
+#Import the data
+mydata = read.csv("pima-indians-diabetes.csv", header = FALSE)
+names(mydata) <- c( "V0","V1","V2","V3") 
+glimpse(mydata)
+#Separating group 2 and cleaning 0's by replacing mean
+column2 =  mydata$X148[]
+
+#Separating group 4 and cleaning 0's by replacing mean
+column4 =  mydata$X35[]
+
+#Separate data by class label for column 2
+tempdata1 <- split(mydata$X148, mydata$X1==1)
+column2group1 = as.numeric(unlist(tempdata1[1]))
+column2group2 = as.numeric(unlist(tempdata1[2]))
+
+#Separate data by class label  for column 4
+tempdata2 <- split(mydata$X35, mydata$X1==1)
+column4group1 = as.numeric(unlist(tempdata2[1]))
+column4group2 = as.numeric(unlist(tempdata2[2]))
+
+hist(column2)
+mean(column2)
+getmode(column2)
+median(column2)
+sd(column2)
+max(column2)
+min(column2)
+hist(column2group1)
+mean(column2group1)
+getmode(column2group1)
+median(column2group1)
+sd(column2group1)
+max(column2group1)
+min(column2group1)
+hist(column2group2)
+mean(column2group2)
+getmode(column2group2)
+median(column2group2)
+sd(column2group2)
+max(column2group2)
+min(column2group2)
+
+hist(column4)
+mean(column4)
+getmode(column4)
+median(column4)
+sd(column4)
+max(column4)
+min(column4)
+hist(column4group1)
+mean(column4group1)
+getmode(column4group1)
+median(column4group1)
+sd(column4group1)
+max(column4group1)
+min(column4group1)
+hist(column4group2)
+mean(column4group2)
+getmode(column4group2)
+median(column4group2)
+sd(column4group2)
+max(column4group2)
+min(column4group2)
+
+par(mfrow=c(1,3))
+hist(column2)
+hist(column2group1)
+hist(column2group2)
+par(mfrow=c(1,3))
+hist(column4)
+hist(column4group1)
+hist(column4group2)
+
+par(mfrow=c(1,2))
+hist(column2)
+hist(column4)
+
+boxplot(column2)
+boxplot(column2group1)
+boxplot(column2group2)
+boxplot(column4)
+boxplot(column4group1)
+boxplot(column4group2)

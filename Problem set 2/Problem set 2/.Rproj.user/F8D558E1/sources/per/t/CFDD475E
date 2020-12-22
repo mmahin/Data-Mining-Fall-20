@@ -1,0 +1,32 @@
+{
+    "id": "CFDD475E",
+    "path": null,
+    "project_path": null,
+    "type": "r_dataframe",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1603649189871.0,
+    "source_on_save": false,
+    "relative_order": 3,
+    "properties": {
+        "expression": "mydata",
+        "caption": "mydata",
+        "totalObservations": 2933,
+        "displayedObservations": 2933,
+        "variables": 3,
+        "cacheKey": "EE3726D6",
+        "object": "mydata",
+        "environment": "",
+        "contentUrl": "grid_resource/gridviewer.html?env=&obj=mydata&cache_key=EE3726D6&max_cols=50",
+        "preview": 0
+    },
+    "folds": "",
+    "lastKnownWriteTime": 13792492905889844,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1603649189871,
+    "read_only": false,
+    "read_only_alternatives": []
+}
